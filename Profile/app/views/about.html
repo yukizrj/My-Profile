@@ -1,0 +1,143 @@
+
+    <div class="container" ng-controller="SkillController">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">About</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>About Me</h3>
+               <hr>
+            </div>
+        </div>
+        
+        <div class="row row-content">
+            <div class="col-xs-12">
+                <h2>My Education</h2>
+                <p class="program">My education experience list below contains the education after high school.</p>
+                
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Education</h3>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>University</dt>
+                            <dd>Illinois Institute of Technology, Chicago , IL</dd>
+                            <dt>Major</dt>
+                            <dd>Computer Science</dd>
+                            <dt>Degree</dt>
+                            <dd>Master</dd>
+                            <dt>When</dt>
+                            <dd>2014-2016</dd>
+                       </dl>
+                       <dl class="dl-horizontal">
+                            <dt>University</dt>
+                            <dd>Guangdong Pharmaceutical University, Guangzhou, Guangdong, China</dd>
+                            <dt>Major</dt>
+                            <dd>Computer Science</dd>
+                            <dt>Degree</dt>
+                            <dd>Bachelor</dd>
+                            <dt>When</dt>
+                            <dd>2010-2014</dd>
+                       </dl>
+                    </div>
+                </div>
+
+            </div>
+          
+        </div>
+
+
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-6">
+                <h2> My Skills</h2>
+               <ul class="media-list">
+					<li class="media" ng-repeat="skill in skills">
+                        <div class="media-body">
+                            <h3 class="media-heading">{{skill.name}}</h3>
+                            <p>{{skill.description}}</p>
+                        </div>
+                    </li>             
+               </ul>
+
+            </div>
+             <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h2>Skills Table</h2>
+                <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <th>
+                            List of name
+                        </th>
+                        
+                    </tr>
+                    <tr>
+                        <th>
+                            Programming Languages
+                        </th>
+                        <td>
+                            Java, Python
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            IDE and tools
+                        </th>
+                        <td>
+                            Eclipse, Sublime
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Databases
+                        </th>
+                        <td>
+                            Oracle, MySQL, MongoDB
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <th>
+                            Operating Systems
+                        </th>
+                        <td>
+                            Windows, Mac OS, Linux
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th>
+                            Web technologies
+                        </th>
+                        <td>
+                            Javascript, HTML5, CSS, JQuery, JSON, AngularJS, Bootstrap
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th>
+                            Web servers
+                        </th>
+                        <td>
+                            Apache TOMCAT
+                        </td>
+
+                    </tr>
+                </table>
+                </div>
+            </div>
+             <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+            </div>
+       </div> 
+    </div>
+

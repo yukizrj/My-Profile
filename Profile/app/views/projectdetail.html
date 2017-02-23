@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row row-content" ng-controller="DetailController">
+        <div class="col-xs-12">
+            <button class="btn btn-xs btn-primary pull-right" type="button" ui-sref="app.projects">
+            Back to Projects</button>
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                <img class="media-object img-thumbnail" style="height:150px;width:150px" ng-src="{{info.image}}" alt="Projects">
+                </a>
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading"><b>{{info.name}}</b></h2>
+                <blockquote ng-repeat="detail in info.details">
+                    <p>{{detail.list}}</p>
+                </blockquote>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+

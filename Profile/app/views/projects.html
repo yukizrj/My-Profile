@@ -1,0 +1,60 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Projects</li>
+            </ul>
+        </div>
+        <div class="col-xs-12">
+               <h3>My Projects</h3>
+               <p class="program">Here list some of my projects below. You can click the button for the description of projects or click the image for the list of work in the project.</p>
+               <hr>
+            </div>
+    </div>
+    <div class="row row-content" ng-controller="ProjectController">
+        <div class="col-xs-12">
+            <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right" type="button">{{showDetails ? "Hide Descript":"Show Descript"}}</button>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" ng-class="{active:isSelected(1)}">
+                <a ng-click="select(1)"
+                     aria-controls="all projects"
+                     role="tab">all projects</a></li>
+                <li role="presentation" ng-class="{active:isSelected(2)}">
+                <a ng-click="select(2)"
+                     aria-controls="17"
+                     role="tab">2017</a></li>
+                <li role="presentation" ng-class="{active:isSelected(3)}">
+                <a ng-click="select(3)"
+                     aria-controls="16"
+                     role="tab">2016</a></li>
+                <li role="presentation" ng-class="{active:isSelected(4)}">
+                <a ng-click="select(4)"
+                     aria-controls="15"
+                     role="tab">2015</a></li>
+                <li role="presentation" ng-class="{active:isSelected(5)}">
+                <a ng-click="select(5)"
+                     aria-controls="14"
+                     role="tab">2014</a></li>
+            </ul>
+            <div class="tab-content">
+                <ul class="media-list tab-pane fade in active">
+                <li class="media" ng-repeat="info in infos | filter:filtText">
+                    <div class="media-left media-middle">
+                        <a ui-sref="app.projectdetails({id: info._id})">
+                        <img class="media-object img-thumbnail" style="height:150px;width:150px" ng-src="{{info.image}}" alt="Projects"></a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{info.name}}
+                        <span class="badge">{{info.location}}</span>
+                        </h2>
+                        <p ng-show="showDetails">{{info.description}}</p>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
